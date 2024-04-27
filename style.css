@@ -86,6 +86,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 300px;
+        margin-top: 150px;
+        height: 0vh;
     }
     
     #first {

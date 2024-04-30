@@ -210,7 +210,8 @@ body {
         overflow:hidden;
         box-sizing:border-box;
         transition:height .2s;
-      }
+    
+    }
       
       #notifyType:before{
         display:block;

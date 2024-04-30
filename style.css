@@ -4,235 +4,241 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
 body {
     background-color: rgb(248, 219, 103);
-    position: relative;
-    margin: 0 auto;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 80vh;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the body fills the viewport */
 }
 
 .container {
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
 }
 
 .image-container {
-    flex-shrink: 0; 
-    margin-right: 20px; 
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
-
-
 .Female-image {
-    position: absolute;
+    position: relative;
     width: 400px;
     height: 300px;
     border-radius: 10%;
-    top: 100px;
-    left: 50px;
+    top: 10px;
     max-width: 100%; 
     height: auto; 
+    bottom: 100px;
 }
 
-.anchor-text {
-    /* Removed left: 150px; */
-    margin: 0;
-    padding-left: 40%;
-    font-size: 60px;
+.header {
     text-align: center;
-    width: 800px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.field {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first,
+#second {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+input[type="url"],
+button {
+    width: 70% ; /* Adjusted for button width and padding */
+    height: 50px;
+    padding: 0 15px;
+    margin-right: 10px;
+    border: 3px solid #232323;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+}
+
+.shorten {
+    width: 150px;
+    height: 50px;
+    padding: 0;
+    background-color: rgb(53, 1, 1);
+    border: none;
+    border-radius: 8px;
     margin: 0;
-    padding-bottom: 2px;
-    line-height: 50px;
-    color: rgb(43, 41, 41);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 16px;
+}
+
+.shorten:hover {
+    background-color: rgb(53, 1, 1);
+}
+
+#copy {
+    width: 150px;
+    height: 50px;
+    padding: 0;
+    background-color: rgb(53, 1, 1);
+    border: none;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#copy:hover {
+    background-color: rgb(53, 1, 1);
 }
 
 
-.sub-text{
-        margin: 0;
-        padding-left: 50%;
-        font-size: 30px;
-        text-align: center;
-        width: 700px;
-        font-weight: 500;
-        color: rgb(53, 1, 1);
-        margin-top: 5%;
-    }
+button {
+    background-color: rgb(53, 1, 1);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgb(53, 1, 1);
+}
+
+#copy {
+    margin-right: 0;
+}
+
+.fa-copy {
+    padding-right: 8px;
+}
+
+.fa-hand-scissors {
+    padding-right: 8px;
+}
 
 
-    p {
-        font-size: 13px;
-        text-align: center;
-        margin: 5px;
-    }
+.fa-link {
+    padding: 15px;
+    margin-bottom: 0px;
+    position: absolute;
+    color: #F45D48;
+}
+
+.fa-up-right-from-square{
+    padding: 15px;
+    margin-bottom: 0px;
+    position: absolute;
+    color: #F45D48;
+}
+
+/* Alert banner */
+
+.notify{  
+    position:absolute;
+    top:0px;
+    width:100%;
+    height:0;  
+    box-sizing:border-box;
+    color:white;  
+    text-align:center;
+    background:rgb(53, 1, 1);
+    /* opacity: 0.6; */
+    overflow:hidden;
+    box-sizing:border-box;
+    transition:height .2s;
+
+}
+  
+  #notifyType:before{
+    display:block;
+    margin-top: 18px; 
     
-    p a {
-        text-decoration: none;
-        color: #f8f5f2d8;
+  }
+  
+  .active{  
+    height: 60px;
+  }
+  
+  .success:before{
+    font-size: 20px;
+    Content:"Yaaaaay!! Your link has been copied";
+  }
+
+  .failed:before{
+    font-size: 20px;
+    Content:"Your link is getting shortened..."
+  }
+
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
     }
-    
-    .field {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 300px;
-        margin-top: 70px;
-        height: 0vh;
+    h2 {
+        font-size: 1.2rem;
     }
-    
-    #first {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 10px;
-        align-content: center;
-    }
-    
-    #input {
-        width: 500px;
-        height: 50px;
-        padding-left: 50px;
-        border: 3px solid #232323;
-        border-radius: 10px;
-        margin: 0;
-        font-size: 18px;
-        outline: none;
-        top: 100px;
-    }
-    
-    .shorten {
-        width: 150px;
-        height: 50px;
-        padding: 0;
-        background-color: rgb(53, 1, 1);
-        border: none;
-        border-radius: 8px;
-        margin: 0;
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
-        padding: 12px 16px;
-    }
-    
-    .shorten:hover {
-        background-color: rgb(53, 1, 1);
-    }
-    
-    #second {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 50px;
-        align-content: center;
-    }
-    
-    #output {
-        width: 500px;
-        height: 50px;
-        padding-left: 50px;
-        border: 3px solid #232323;
-        border-radius: 10px;
-        margin: 0;
-        font-size: 18px;
-        outline: none;
-    }
-    
-    #copy {
-        width: 150px;
-        height: 50px;
-        padding: 0;
-        background-color: rgb(53, 1, 1);
-        border: none;
-        border-radius: 8px;
-        margin: 0;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 12px 16px;
-        cursor: pointer;
-    }
-    
-    #copy:hover {
-        background-color: rgb(53, 1, 1);
-    }
-    
+    input[type="url"],
     button {
-        color: #F8F5F2; 
+        font-size: 16px;
     }
-    
-    
-    
-    .fa-copy {
-        padding-right: 8px;
+    #first,
+#second {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    align-content: center;
+}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
     }
-    
-    .fa-hand-scissors {
-        padding-right: 8px;
+    h2 {
+        font-size: 1rem;
     }
-    
-    
-    .fa-link {
-        padding: 15px;
-        margin-bottom: 0px;
-        position: absolute;
-        color: #F45D48;
+    input[type="url"],
+    button {
+        font-size: 14px;
     }
-    
-    .fa-up-right-from-square{
-        padding: 15px;
-        margin-bottom: 0px;
-        position: absolute;
-        color: #F45D48;
-    }
-    
-    /* Alert banner */
-    
-    .notify{  
-        position:absolute;
-        top:0px;
-        width:100%;
-        height:0;  
-        box-sizing:border-box;
-        color:white;  
-        text-align:center;
-        background:rgb(53, 1, 1);
-        /* opacity: 0.6; */
-        overflow:hidden;
-        box-sizing:border-box;
-        transition:height .2s;
-    
-    }
-      
-      #notifyType:before{
-        display:block;
-        margin-top: 18px; 
-        
-      }
-      
-      .active{  
-        height: 60px;
-      }
-      
-      .success:before{
-        font-size: 20px;
-        Content:"Yaaaaay!! Your link has been copied";
-      }
-    
-      .failed:before{
-        font-size: 20px;
-        Content:"Your link is getting shortened..."
-      }
-    
-    
-    
-    
+}

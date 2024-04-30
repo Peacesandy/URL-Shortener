@@ -115,7 +115,7 @@ body {
         width: 150px;
         height: 50px;
         padding: 0;
-        background-color: #078080;
+        background-color: rgb(53, 1, 1);
         border: none;
         margin: 0;
         font-size: 18px;
@@ -125,7 +125,7 @@ body {
     }
     
     .shorten:hover {
-        background-color: #026060;
+        background-color: rgb(53, 1, 1);
     }
     
     #second {
@@ -151,7 +151,7 @@ body {
         width: 150px;
         height: 50px;
         padding: 0;
-        background-color: #078080;
+        background-color: rgb(53, 1, 1);
         border: none;
         margin: 0;
         font-size: 18px;
@@ -161,7 +161,7 @@ body {
     }
     
     #copy:hover {
-        background-color: #026060;
+        background-color: rgb(53, 1, 1);
     }
     
     button {
@@ -203,7 +203,7 @@ body {
         box-sizing:border-box;
         color:white;  
         text-align:center;
-        background:#026060;
+        background:rgb(53, 1, 1);
         /* opacity: 0.6; */
         overflow:hidden;
         box-sizing:border-box;

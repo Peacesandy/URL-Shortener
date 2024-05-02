@@ -9,3 +9,9 @@ This shortened link means whoever sees your ad has an easy-to-type URL to visit,
 
 ![Screenshot 2024-05-02 024214](https://github.com/Peacesandy/URL-Shortener/assets/78281826/f60f4843-7683-454f-98bd-4f6a4e6b61d7)
 
+# Tech Stack 
+
+- Frontend: JavaScript, HTML, CSS
+- Version Control: Git and GitHub
+- Hosting: Vercel
+- Code Editor and tools: VS Code
